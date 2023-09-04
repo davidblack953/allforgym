@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>ALL FOR GYM EL SALVADOR</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet">
+  
+  <style>
+    .navbar-custom {
+      background-color: #CCCCCC; /* Fondo gris personalizado */
+    }
+
+    .navbar-search {
+      width: 300px; /* Aumenta el ancho de la barra de búsqueda */
+    }
+    
+    .navbar-cart {
+      margin-right: 10px; /* Espacio a la derecha del botón del carrito */
+    }
+    
+    .navbar-options {
+      background-color: #F2F2F2; /* Fondo de la fila de opciones */
+      padding: 10px; /* Espacio interior */
+      display: flex;
+      justify-content: center; /* Centra los elementos horizontalmente */
+      align-items: center;
+    }
+    
+    .contact-info {
+      display: flex;
+      align-items: center;
+      margin: 0 20px; /* Espacio horizontal entre los elementos */
+    }
+    
+    .contact-icon {
+      margin-right: 5px;
+    }
+    
+    /* Estilos para el slider */
+    .carousel-container {
+      margin-top: 20px; /* Espacio superior */
+      max-width: 800px; /* Ancho máximo del contenedor del slider */
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    /* Establece el alto de las imágenes del slider */
+    .carousel-item img {
+      max-width: 100%; /* Ajusta el ancho de la imagen al 100% del contenedor */
+      height: 85%; /* Cambia el alto de las imágenes al 85% */
+      object-fit: cover; /* Ajusta la imagen para cubrir todo el contenedor */
+    }
+
+    /* Estilos para los contenedores de productos */
+    .product-container {
+      background-color: #ECECEC; /* Fondo de los contenedores */
+      padding: 20px;
+      text-align: center;
+      margin-top: 20px;
+    }
+     /* Estilos para las imágenes de los productos */
+     .product-image {
+      max-width: 300px; /* Ancho máximo de las imágenes */
+      margin-bottom: 10px; /* Espacio entre la imagen y el título */
+    }
+   /* Estilos para la barra de redes sociales */
+.social-bar {
+  background-color: #007bff; /* Color de fondo para resaltar la barra */
+  padding: 10px 0; /* Espaciado interior de la barra */
+  text-align: center; /* Centra los iconos horizontalmente */
+}
+
+/* Estilos para los iconos de redes sociales */
+.social-icon {
+  font-size: 24px; /* Tamaño de fuente de los iconos */
+  margin: 0 10px; /* Espacio horizontal entre los iconos */
+  color: #fff; /* Color de los iconos (puedes personalizarlo) */
+  text-decoration: none; /* Elimina subrayados en los enlaces */
+}
+
+.social-icon:hover {
+  color: #ccc; /* Cambia el color al pasar el mouse (puedes personalizarlo) */
+}
+
+
+
+
+
+
+  </style>
+</head>
+<body>
+  <nav class="navbar navbar-expand-lg navbar-custom">
+    <a class="navbar-brand" href="#">ALL FOR GYM EL SALVADOR
+      <img src="/static/logo.png" alt="Logo"> <!-- Mueve el logo al principio -->
+    </a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav">
+        <li class="nav-item active">
+          <a class="nav-link" href="#">Inicio <span class="sr-only">(current)</span></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="productos">Productos</a>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            Menú
+          </a>
+          <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+            <a class="dropdown-item" href="#">Ropa</a>
+            <a class="dropdown-item" href="#">Accesorios</a>
+            <a class="dropdown-item" href="#">Suplementeos deportivos</a>
+            <a class="dropdown-item" href="#">Otro</a>
+            <li class="nav-item">
+                <a class="nav-link" href="/nosotros">Nosotros</a>
+              </li>
+          </div>
+        </li>
+      </ul>
+      <form class="form-inline my-2 my-lg-0">
+        <div class="input-group">
+          <input class="form-control mr-sm-2 navbar-search" type="search" placeholder="Buscar" aria-label="Buscar">
+          <div class="input-group-append">
+            <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Buscar</button>
+          </div>
+        </div>
+      </form>
+    </div>
+    
+    <!-- Botón del carrito con icono de Font Awesome -->
+    <a class="btn btn-outline-secondary navbar-cart" href="#">
+      <i class="fas fa-shopping-cart"></i>
+    </a>
+  </nav>
+
+  <!-- Fila de opciones con iconos y enlaces -->
+  <div class="navbar-options">
+    <div class="contact-info">
+      <i class="fas fa-phone contact-icon"></i>
+      <span>Número de teléfono de ejemplo</span>
+    </div>
+    <div class="contact-info">
+      <i class="fab fa-whatsapp contact-icon"></i>
+      <span>Compra por WhatsApp</span>
+    </div>
+    <div class="contact-info">
+      <i class="fas fa-dollar-sign contact-icon"></i>
+      <span>Precios de Mayoreo</span>
+    </div>
+    <a href="#">Horarios y Sucursales</a>
+  </div>
+
+  <!-- Slider de imágenes -->
+  <div id="imageCarousel" class="carousel slide carousel-container" data-bs-ride="carousel">
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+        <img src="static\slide0.png" class="d-block w-100" alt="Imagen 1">
+      </div>
+      <div class="carousel-item">
+        <img src="static\slide1.png" class="d-block w-100" alt="Imagen 2">
+      </div>
+      <div class="carousel-item">
+        <img src="static\slide2.png" class="d-block w-100" alt="Imagen 3">
+      </div>
+    </div>
+    <a class="carousel-control-prev" href="#imageCarousel" role="button" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Previous</span>
+    </a>
+    <a class="carousel-control-next" href="#imageCarousel" role="button" data-bs-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Next</span>
+    </a>
+  </div>
+
+ <!-- Contenedores de productos -->
+ <div class="container">
+    <div class="row">
+      <div class="col-md-3">
+        <div class="product-container">
+          <img src="static\imagen1.png" alt="Suplementos" class="product-image">
+          <h4>Suplementos</h4>
+          <!-- Puedes agregar contenido relacionado con suplementos aquí -->
+        </div>
+      </div>
+      <div class="col-md-3">
+        <div class="product-container">
+          <img src="static\imagen2.png" alt="Accesorios Deportivos" class="product-image">
+          <h4>Accesorios Deportivos</h4>
+          <!-- Puedes agregar contenido relacionado con accesorios deportivos aquí -->
+        </div>
+      </div>
+      <div class="col-md-3">
+        <div class="product-container">
+          <img src="static\imagen3.png" alt="Ropa" class="product-image">
+          <h4>Ropa</h4>
+          <!-- Puedes agregar contenido relacionado con ropa aquí -->
+        </div>
+      </div>
+      <div class="col-md-3">
+        <div class="product-container">
+          <img src="static\imagen4.png" alt="Otros" class="product-image">
+          <h4>Otros</h4>
+          <!-- Puedes agregar contenido relacionado con otros productos aquí -->
+        </div>
+      </div>
+    </div>
+  </div>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet">
+ 
+<!-- Contenedor de la barra de redes sociales -->
+<div class="social-bar">
+    <a href="#" target="_blank" class="social-icon"><i class="fab fa-facebook"></i></a>
+    <a href="#" target="_blank" class="social-icon"><i class="fab fa-instagram"></i></a>
+    <a href="https://wa.me/TUNUMERODEWHATSAPP" target="_blank" class="social-icon"><i class="fab fa-whatsapp"></i></a>
+  </div>
+  {% include 'whatsapp_button.html' %}
+ 
+  <!-- Incluye las dependencias de JavaScript de Bootstrap -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="{{ url_for('static', filename='app.js') }}"></script>
+</body>
+</html>

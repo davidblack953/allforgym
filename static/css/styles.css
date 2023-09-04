@@ -1,0 +1,43 @@
+/* Estilos para el contenedor del botón de WhatsApp */
+.whatsapp-button-container {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 1000;
+    transition: transform 0.3s ease;
+  }
+  
+  /* Estilos para el botón de WhatsApp dentro del contenedor */
+  .whatsapp-button-container img {
+    width: 60px;
+    height: auto;
+    border-radius: 50%;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+  }
+  
+  /* Estilo de hover para el botón de WhatsApp */
+  .whatsapp-button-container img:hover {
+    transform: scale(1.1);
+  }
+  
+  /* Clase adicional para el contenedor cuando está desplazado */
+  .whatsapp-button-container.scrolled {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+  }
+  .scrolled {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    /* Otros estilos para el botón flotante */
+  }
+  /* Estilos iniciales para el botón de WhatsApp */
+.whatsapp-button {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 999; /* Asegura que esté en la parte superior de otros elementos */
+  transition: transform 0.2s ease-out; /* Agrega una transición suave */
+}

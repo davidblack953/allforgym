@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Nosotros -All For Gym</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <style>
+  /* Estilos para la imagen principal */
+.main-image {
+  max-width: 70%; /* Ancho máximo del contenedor de la imagen */
+  display: block;
+  margin: 0 auto; /* Centra la imagen horizontalmente */
+}
+
+/* Estilos para los contenedores de sección */
+.section-container {
+  padding: 20px;
+  background-color: #ECECEC;
+  margin: 20px auto; /* Centra los contenedores horizontalmente y agrega margen arriba y abajo */
+  max-width: 800px; /* Ancho máximo del contenedor */
+  text-align: justify; /* Justifica el texto dentro del contenedor */
+}
+
+/* Estilos para el título de la sección */
+.section-title {
+  font-size: 24px;
+  font-weight: bold;
+  text-align: center; /* Centra el título horizontalmente */
+  margin-bottom: 10px; /* Agrega margen inferior al título */
+}
+
+/* Estilos para el texto de la misión y visión */
+.mission-vision {
+  font-size: 18px;
+  margin: 10px 0; /* Agrega margen arriba y abajo para separar los párrafos */
+  text-align: justify; /* Justifica el texto dentro del contenedor */
+}
+
+/* Estilos para separar Misión y Visión */
+.mission-vision-vision {
+  margin-top: 20px; /* Agrega margen superior entre Misión y Visión */
+}
+
+/* Estilos para las dos columnas */
+.mission-vision-columns {
+  display: flex;
+  justify-content: space-between;
+}
+
+/* Estilos para cada columna */
+.mission-vision-column {
+  flex: 1;
+}
+/* Estilos para separar Misión y Visión */
+.mission-vision-column:last-child {
+  margin-left: 20px; /* Agrega margen izquierdo a la última columna para separarla */
+}
+
+</style>
+</head>
+<body>
+
+      <!-- Incluye el menú desde el archivo de plantilla "menu.html" -->
+  {% include 'menu.html' %}
+  <!-- Contenedor de la imagen principal -->
+  <div class="container">
+    <img src="static\quienessomos.png" alt="Imagen Principal" class="main-image">
+  </div>
+
+  <!-- Contenedor de la sección de Misión y Visión -->
+<div class="container section-container">
+    <h2 class="section-title">Misión y Visión</h2>
+    <div class="mission-vision-columns">
+      <div class="mission-vision-column">
+        <p class="mission-vision">
+          <strong>Misión:</strong> Ser la fuente de inspiración y apoyo definitiva para la comunidad de entusiastas del fitness, proporcionando productos de alta calidad, asesoramiento experto y un compromiso inquebrantable con la salud y el bienestar.
+        </p>
+      </div>
+      <div class="mission-vision-column">
+        <p class="mission-vision">
+          <strong>Visión:</strong> Transformar vidas a través del fitness y la salud, convirtiéndonos en la marca líder en la industria de artículos de gimnasio. Nos esforzamos por ofrecer una gama diversa de productos de vanguardia, fomentar la pasión por el fitness y promover un estilo de vida activo y saludable en todo el mundo.
+        </p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Contenedor de la sección de Valores -->
+  <div class="container section-container">
+    <h2 class="section-title">Valores</h2>
+    <ul>
+      <li><strong>Calidad Inquebrantable:</strong> Nos comprometemos a ofrecer productos y servicios de la más alta calidad para ayudar a nuestros clientes a alcanzar sus objetivos de fitness.
+
+      </li>
+      <li><strong>Pasion por el fitness</strong>Somos apasionados por el fitness y estamos dedicados a compartir esa pasión con nuestros clientes, inspirándolos a vivir vidas más saludables y activas.
+    </li>
+      <li><strong>Innovacion continua:</strong>Buscamos constantemente nuevas formas de mejorar y evolucionar nuestros productos y servicios para mantenernos a la vanguardia de la industria del fitness.
+    </li>
+    </ul>
+  </div>
+
+  <!-- Contenedor de la sección de Historia -->
+  <div class="container section-container">
+    <h2 class="section-title">Historia</h2>
+    <p>
+        Historia de la Empresa: "GymLife"
+
+        En el corazón de nuestra historia se encuentra una profunda pasión por el fisicoculturismo y un legado familiar que se ha convertido en una inspiración para todos nosotros. Todo comenzó con la devoción de nuestro padre, un apasionado fisicoculturista que dedicó su vida al cultivo de su cuerpo y al bienestar. Su compromiso y determinación no solo lo llevaron a alcanzar metas físicas impresionantes, sino que también lo convirtieron en un modelo a seguir para la comunidad del fitness.
+        
+        Siguiendo los pasos de nuestro amado padre, decidimos llevar su legado al siguiente nivel. En enero de 2022, abrimos las puertas de "GymLife", un gimnasio que no solo ofrece un lugar para el entrenamiento físico, sino que también encarna el espíritu de dedicación y pasión por el fitness que nuestro padre nos transmitió.
+        
+        Al principio, éramos un gimnasio modesto, pero con el tiempo y un compromiso inquebrantable con nuestros valores, hemos prosperado. Cada día, nuestros clientes experimentan el poder transformador del fitness y la salud en nuestras instalaciones. Nuestro equipo altamente capacitado y apasionado está aquí para guiarlos en su viaje hacia una vida más activa y saludable.
+        
+        Lo que comenzó como un pequeño gimnasio se ha convertido en una verdadera comunidad de entusiastas del fitness. Nuestros miembros se apoyan mutuamente, comparten sus éxitos y desafíos, y encuentran inspiración en la historia de nuestro fundador y en sus propios logros.
+        
+        A medida que "GymLife" ha crecido, también lo ha hecho nuestro compromiso con la innovación y la calidad. Hemos expandido nuestro catálogo de equipos de gimnasio y accesorios deportivos para brindar a nuestros miembros las mejores herramientas para alcanzar sus metas. Además, hemos reunido un equipo de entrenadores altamente calificados que comparten nuestra pasión y están comprometidos a ayudar a nuestros miembros a alcanzar su máximo potencial.
+        
+        Nuestra visión es clara: transformar vidas a través del fitness y convertirnos en la marca líder en la industria de artículos de gimnasio. A medida que avanzamos, también mantenemos un firme compromiso con la responsabilidad ambiental, buscando formas de reducir nuestro impacto en el planeta y contribuir a un mundo más saludable en todos los sentidos.
+        
+        En "GymLife", no solo estamos en el negocio del fitness, sino en el negocio de cambiar vidas. Cada día, nos inspira la memoria de nuestro padre y la determinación que demostró a lo largo de su vida. Seguimos sus pasos, y nuestro compromiso es ayudar a otros a lograr sus metas de fitness y alcanzar una vida más saludable y activa. Esto es lo que somos y lo que siempre seremos: "GymLife", donde la pasión por el fitness se convierte en un estilo de vida.
+    </p>
+  </div>
+
+  <!-- ... (código posterior) ... -->
+</body>
+</html>
